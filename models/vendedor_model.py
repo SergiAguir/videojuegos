@@ -1,0 +1,17 @@
+# -*- coding: utf-8 -*-
+
+from odoo import models, fields, api
+from datetime import datetime
+from time import time
+
+class vendedor_model(models.Model):
+    _name = 'videojuegos.vendedor_model'
+    _description = 'Modelo de vendedor'
+    _sql_constraints = [("sql_check_id_vendedor", "UNIQUE(name)","Error en el vendedor. El id ya existe!"), ]
+
+    name = fields.Integer(string="Id",required=True,help="Id de vendedor")
+    fechaAlta = fields.Date(string="Fecha", default=lambda self: datetime.today())
+    #Relacion uno a muchos con persona
+    cod_persona = fields.One2many("videojuegos.persona_model","cod_vendedor")
+    #Relacion uno a muchos con prestamo
+    cod_prestamo = fields.One2many("videojuegos.prestamo_model","cod_vendedor")

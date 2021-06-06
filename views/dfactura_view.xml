@@ -1,0 +1,37 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="videojuegos.listado_dfactura_tree">
+      <field name="name">Listado de detalle facturas</field>
+      <field name="model">videojuegos.dfactura_model</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="cod_factura"/>
+          <field name="cod_juego"/>
+          <field name="cantidad"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="videojuegos.listado_dfactura_form">
+      <field name="name">Formulario de detalle facturas</field>
+      <field name="model">videojuegos.dfactura_model</field>
+      <field name="arch" type="xml">
+        <form string="Nuevo detalle factura">
+          <group>
+            <field name="cod_factura"/>
+            <field name="cod_juego"/>
+            <field name="cantidad"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="videojuegos.action_window_dfactura">
+      <field name="name">Listado de detalle facturas</field>
+      <field name="res_model">videojuegos.dfactura_model</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+  </data>
+</odoo>

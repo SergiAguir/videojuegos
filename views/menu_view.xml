@@ -1,0 +1,21 @@
+<odoo>
+  <data>
+    <menuitem name="Videojuegos" id="videojuegos.menu_root"/>
+
+    <menuitem name="Acciones Personas" id="videojuegos.menu_acciones_persona" parent="videojuegos.menu_root"/>
+    <menuitem name="Acciones Juegos" id="videojuegos.menu_acciones_juegos" parent="videojuegos.menu_root"/>
+    <menuitem name="Acciones Factura" id="videojuegos.menu_acciones_factura" parent="videojuegos.menu_root"/>
+
+    <menuitem name="Persona" id="videojuegos.menu_persona" parent="videojuegos.menu_acciones_persona" action="videojuegos.action_window_persona"/>
+    <menuitem name="Socio" id="videojuegos.menu_socio" parent="videojuegos.menu_acciones_persona" action="videojuegos.action_window_socio"/>
+    <menuitem name="Vendedor" id="videojuegos.menu_vendedor" parent="videojuegos.menu_acciones_persona" action="videojuegos.action_window_vendedor"/>
+
+    <menuitem name="Juego" id="videojuegos.menu_juego" parent="videojuegos.menu_acciones_juegos" action="videojuegos.action_window_juego"/>
+    <menuitem name="Genero" id="videojuegos.menu_genero" parent="videojuegos.menu_acciones_juegos" action="videojuegos.action_window_genero"/>
+
+    <menuitem name="Prestamo" id="videojuegos.menu_prestamo" parent="videojuegos.menu_root" action="videojuegos.action_window_prestamo"/>
+
+    <menuitem name="Factura" id="videojuegos.menu_factura" parent="videojuegos.menu_acciones_factura" action="videojuegos.action_window_factura"/>
+    <menuitem name="Detalle Factura" id="videojuegos.menu_dfactura" parent="videojuegos.menu_acciones_factura" action="videojuegos.action_window_dfactura"/>
+  </data>
+</odoo>

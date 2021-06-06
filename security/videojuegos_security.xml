@@ -1,0 +1,17 @@
+<odoo>
+    <record id="module_videojuegos_category" model="ir.module.category">
+        <field name="name">Videojuegos</field>
+    </record>
+    <!-- Videojuegos Administratico Group -->
+    <record id="videojuegos_group_adm" model="res.groups">
+        <field name="name">Administrativo</field>
+        <field name="category_id" ref="module_videojuegos_category"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+    <!-- Videojuegos Vendedor Group -->
+    <record id="videojuegos_group_vendedores" model="res.groups">
+        <field name="name">Vendedores</field>
+        <field name="category_id" ref="module_videojuegos_category"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+</odoo>
